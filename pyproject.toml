@@ -1,0 +1,24 @@
+[project]
+authors = [
+  {name = "abersheeran", email = "me@abersheeran.com"},
+]
+dependencies = []
+description = "The latest version of the standard library can be used in the same way as the old version of Python."
+dynamic = ["classifiers"]
+license = {text = "MIT"}
+name = "last-standard"
+requires-python = ">=3.6"
+version = "0.1.0"
+
+[project.urls]
+homepage = "https://github.com/multi-python/last-standard"
+
+[project.optional-dependencies]
+contextvars = ['contextvars; python_version<"3.7"']
+dataclasses = ['dataclasses; python_version<"3.7"']
+graphlib = ['graphlib_backport; python_version<"3.9"']
+zoneinfo = ['backports.zoneinfo; python_version<"3.9"']
+
+[build-system]
+build-backend = "pdm.pep517.api"
+requires = ["pdm-pep517"]
